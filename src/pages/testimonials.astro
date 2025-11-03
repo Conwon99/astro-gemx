@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+---
+
+<BaseLayout 
+  title="Testimonials - Client Reviews for Holistic Wellness Services in Saltcoats | Goddess of Goodness" 
+  description="Read authentic client testimonials and reviews about Goddess of Goodness holistic wellness services in Saltcoats including Swedish massage, cupping therapy, Reiki energy healing, Thai foot massage, and signature facials."
+  canonical="/testimonials"
+>
+  <div class="min-h-screen bg-background">
+    <Header client:load />
+    
+    <main>
+      <section class="relative pt-24 pb-8 lg:pt-32 lg:pb-12 overflow-hidden" style="min-height: 60vh;">
+        {/* Background image - Mobile */}
+        <img
+          src="/phoneback.png"
+          alt="Background"
+          class="absolute inset-0 w-full h-full object-cover md:hidden"
+          style="width: 100%; height: 100%; z-index: 0;"
+        />
+        {/* Background image - Desktop */}
+        <img
+          src="/Gemini_Generated_Image_nt024nnt024nnt02.png"
+          alt="Background"
+          class="hidden md:block absolute inset-0 w-full h-full object-cover"
+          style="width: 100%; height: 100%; z-index: 0;"
+        />
+        <div class="container mx-auto px-6 relative z-10">
+          <div class="text-center max-w-4xl mx-auto">
+            <h1 class="text-5xl lg:text-7xl font-normal leading-tight mb-6 font-rocaone tracking-tight" style="color: #fffff0;">
+              Testimonials
+            </h1>
+          </div>
+        </div>
+      </section>
+      
+      <section class="pt-8 pb-20 lg:pt-12 lg:pb-32 bg-background">
+        <div class="container mx-auto px-6">
+          <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform" style="background-color: #a0b894;">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+                  <img src="/angeassets/test1.jpg" alt="Wendy Wood" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <h4 class="font-normal text-foreground">Wendy Wood</h4>
+                  <div class="flex">
+                    <span class="text-yellow-400 text-xl">★★★★★</span>
+                  </div>
+                </div>
+              </div>
+              <p class="text-foreground/80 leading-relaxed">
+                "I absolutely love my treatments at Goddess of Goodness. The Swedish massage sessions have been transformative for both my mind and physical wellbeing. The therapeutic atmosphere and professional care make every visit restorative."
+              </p>
+            </div>
+            
+            <div class="backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform" style="background-color: #a0b894;">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+                  <img src="/angeassets/test2.jpg" alt="Satisfied Client" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <h4 class="font-normal text-foreground">Satisfied Client</h4>
+                  <div class="flex">
+                    <span class="text-yellow-400 text-xl">★★★★★</span>
+                  </div>
+                </div>
+              </div>
+              <p class="text-foreground/80 leading-relaxed">
+                "The Reiki energy healing sessions have been amazing for my stress levels and overall energy. Each treatment is tailored to my needs, and I always leave feeling refreshed, balanced, and more at peace."
+              </p>
+            </div>
+            
+            <div class="backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform" style="background-color: #a0b894;">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+                  <img src="/angeassets/TEST3.jpg" alt="Happy Customer" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <h4 class="font-normal text-foreground">Happy Customer</h4>
+                  <div class="flex">
+                    <span class="text-yellow-400 text-xl">★★★★★</span>
+                  </div>
+                </div>
+              </div>
+              <p class="text-foreground/80 leading-relaxed">
+                "Goddess of Goodness creates such a peaceful, healing environment. The cupping therapy has done wonders for my chronic pain, and the signature facials are pure luxury. I wouldn't go anywhere else for my wellness needs."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Section -->
+      <section class="py-16 lg:py-24 bg-gradient-to-br from-green-50 to-green-100">
+        <div class="container mx-auto px-6">
+          <div class="max-w-4xl mx-auto text-center bg-white rounded-2xl p-12 shadow-lg" style="border: 1px solid #7a8f6d;">
+            <h2 class="text-4xl lg:text-5xl font-normal text-foreground mb-6 font-rocaone tracking-tight">
+              Ready to Experience the Difference?
+            </h2>
+            <p class="text-lg lg:text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">
+              Join my satisfied clients and discover the transformative power of holistic healing. Book your treatment today and begin your journey to wellness.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                class="inline-block text-white px-10 py-5 rounded-full transition-all duration-300 font-medium text-lg hover:scale-105 transform"
+                style="background-color: #4a4f31;"
+                onmouseenter="this.style.backgroundColor='#3d4128'"
+                onmouseleave="this.style.backgroundColor='#4a4f31'"
+              >
+                Book Your Treatment
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <Footer client:load />
+  </div>
+</BaseLayout>
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.goddessofgoodness.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Testimonials",
+      "item": "https://www.goddessofgoodness.com/testimonials"
+    }
+  ]
+})} />
+

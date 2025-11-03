@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import HeroSection from '../components/HeroSection';
+import StatsSection from '../components/StatsSection';
+import ScheduleSection from '../components/ScheduleSection';
+import ReflexologySection from '../components/ReflexologySection';
+import TeamSection from '../components/TeamSection';
+import TestimonialsSection from '../components/TestimonialsSection';
+import WhatIsCuppingSection from '../components/WhatIsCuppingSection';
+import WhatIsReikiSection from '../components/WhatIsReikiSection';
+import FinalCTASection from '../components/FinalCTASection';
+import ContactSection from '../components/ContactSection';
+import FAQSection from '../components/FAQSection';
+import Footer from '../components/Footer';
+---
+
+<BaseLayout 
+  title="Goddess of Goodness - Holistic Wellness & Healing Therapies in Saltcoats"
+  description="Professional holistic healing services in Saltcoats, Ayrshire. Swedish massage, cupping therapy, Reiki energy healing, Thai foot massage, Hopi ear candling, and signature facials. Book your wellness treatment today."
+  canonical="/"
+>
+  <div class="min-h-screen bg-background">
+    {/* Full-width fixed header */}
+    <Header client:load />
+
+    {/* Full-width hero section */}
+    <main>
+      <HeroSection client:load />
+
+      {/* Full-width banner */}
+      <StatsSection client:load />
+
+      {/* Constrained content sections */}
+      <div class="max-w-6xl mx-auto">
+        <ScheduleSection client:load />
+        <ReflexologySection client:load />
+        <WhatIsCuppingSection client:load />
+        <WhatIsReikiSection client:load />
+        <TeamSection client:load />
+        <TestimonialsSection client:load />
+        <FinalCTASection client:load />
+        <ContactSection client:load />
+        <FAQSection client:load />
+      </div>
+      <Footer client:load />
+    </main>
+  </div>
+</BaseLayout>
+
+<script>
+  // Handle scroll to section on page load
+  if (import.meta.env.SSR === false) {
+    const hash = window.location.hash;
+    if (hash) {
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }, 100);
+    }
+  }
+</script>
+

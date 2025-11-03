@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import ServiceBookingCards from '../components/ServiceBookingCards';
+---
+
+<BaseLayout 
+  title="Book Your Treatment - Schedule Holistic Wellness Appointment in Saltcoats | Goddess of Goodness" 
+  description="Book your holistic wellness treatment in Saltcoats. Schedule your Swedish massage, cupping therapy, Reiki energy healing, Thai foot massage, Hopi ear candling, or signature facial appointment today."
+  canonical="/classes-booking"
+>
+  <div class="min-h-screen bg-background">
+    <Header client:load />
+    
+    <main>
+      <!-- Hero Section -->
+      <section class="relative pt-24 pb-8 lg:pt-32 lg:pb-12 overflow-hidden" style="min-height: 60vh;">
+        {/* Background image - Mobile */}
+        <img
+          src="/phoneback.png"
+          alt="Background"
+          class="absolute inset-0 w-full h-full object-cover md:hidden"
+          style="width: 100%; height: 100%; z-index: 0;"
+        />
+        {/* Background image - Desktop */}
+        <img
+          src="/Gemini_Generated_Image_nt024nnt024nnt02.png"
+          alt="Background"
+          class="hidden md:block absolute inset-0 w-full h-full object-cover"
+          style="width: 100%; height: 100%; z-index: 0;"
+        />
+        <div class="container mx-auto px-6 relative z-10">
+          <div class="text-center max-w-4xl mx-auto">
+            <h1 class="text-4xl lg:text-6xl font-normal mb-6 font-rocaone tracking-tighter" style="color: #fffff0;">
+              Book Your Treatment
+            </h1>
+            <p class="text-xl max-w-3xl mx-auto leading-relaxed mb-8" style="color: #fffff0;">
+              Professional holistic healing services in Saltcoats. Experience the transformative power of my comprehensive range of therapeutic treatments designed for your complete wellbeing.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Individual Services with Booking -->
+      <ServiceBookingCards client:load />
+
+      <!-- How to Book Information -->
+      <section class="mb-16 px-6">
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8" style="border: 1px solid #7a8f6d;">
+            <h2 class="text-3xl lg:text-4xl font-normal text-foreground mb-6 text-center font-rocaone">
+              How to Book
+            </h2>
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+              <div class="bg-white rounded-lg p-6">
+                <h3 class="text-xl font-medium mb-4 text-foreground">📞 Phone Booking</h3>
+                <p class="text-muted-foreground mb-4">Call me to discuss your treatment needs and schedule your appointment.</p>
+                <a href="/contact" class="text-primary hover:text-primary/80 font-medium">Contact Me</a>
+              </div>
+              <div class="bg-white rounded-lg p-6">
+                <h3 class="text-xl font-medium mb-4 text-foreground">📧 Online Booking</h3>
+                <p class="text-muted-foreground mb-4">Use my contact form to book your treatment or ask questions.</p>
+                <a href="/contact" class="text-primary hover:text-primary/80 font-medium">Book Online</a>
+              </div>
+            </div>
+            <p class="text-center text-muted-foreground">
+              All treatments are performed in my professional Saltcoats wellness studio. I recommend booking in advance to secure your preferred time slot.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- What to Expect -->
+      <section class="mb-16 px-6">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl lg:text-4xl font-normal text-foreground mb-8 text-center font-rocaone">
+            What to Expect
+          </h2>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="text-center">
+              <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #a0b894;">
+                <span class="text-3xl">🕐</span>
+              </div>
+              <h3 class="text-lg font-medium mb-2">60-90 Minute Sessions</h3>
+              <p class="text-muted-foreground text-sm">Each treatment is tailored to your needs and schedule</p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #a0b894;">
+                <span class="text-3xl">🛋️</span>
+              </div>
+              <h3 class="text-lg font-medium mb-2">Peaceful Environment</h3>
+              <p class="text-muted-foreground text-sm">Relax in my tranquil Saltcoats wellness studio</p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #a0b894;">
+                <span class="text-3xl">💆</span>
+              </div>
+              <h3 class="text-lg font-medium mb-2">Professional Care</h3>
+              <p class="text-muted-foreground text-sm">Certified and experienced holistic healing practitioner</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="text-center px-6 mb-16">
+        <div class="bg-gradient-to-br from-green-100 to-green-50 rounded-2xl p-8 max-w-2xl mx-auto">
+          <h2 class="text-2xl lg:text-3xl font-normal text-foreground mb-4 font-rocaone tracking-tight">
+            Ready to Begin Your Healing Journey?
+          </h2>
+          <p class="text-muted-foreground mb-6 leading-relaxed">
+            Book your holistic treatment today and experience the transformative power of professional healing therapies.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/contact" 
+              class="text-white px-8 py-4 rounded-full transition-all duration-300 font-medium text-lg hover:scale-105 transform whitespace-nowrap"
+              style="background-color: #4a4f31;"
+              onmouseenter="this.style.backgroundColor='#3d4128'"
+              onmouseleave="this.style.backgroundColor='#4a4f31'"
+            >
+              Book Your Treatment
+            </a>
+            <a 
+              href="/services" 
+              class="px-8 py-4 rounded-full transition-all duration-300 font-medium text-lg hover:scale-105 transform"
+              style="border: 2px solid #4a4f31; color: #4a4f31;"
+              onmouseenter="this.style.backgroundColor='#4a4f31'; this.style.color='#ffffff';"
+              onmouseleave="this.style.backgroundColor='transparent'; this.style.color='#4a4f31';"
+            >
+              View Services
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    
+    <Footer client:load />
+  </div>
+</BaseLayout>

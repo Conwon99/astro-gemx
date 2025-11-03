@@ -1,0 +1,261 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { MessageCircle, Phone, Send, Mail } from 'lucide-react';
+---
+
+<BaseLayout 
+  title="Contact Me - Book Your Holistic Wellness Treatment in Saltcoats | Goddess of Goodness" 
+  description="Contact Goddess of Goodness to book your holistic wellness treatment in Saltcoats. Call 07782 844404 or email goddessofgoodness1@outlook.com. Schedule your Swedish massage, cupping therapy, Reiki healing, or other services."
+  canonical="/contact"
+>
+  <div class="min-h-screen bg-background">
+    <Header client:load />
+    
+    <main>
+      <section class="relative pt-24 pb-8 lg:pt-32 lg:pb-12 overflow-hidden" style="min-height: 60vh;">
+        {/* Background image - Mobile */}
+        <img
+          src="/phoneback.png"
+          alt="Background"
+          class="absolute inset-0 w-full h-full object-cover md:hidden"
+          style="width: 100%; height: 100%; z-index: 0;"
+        />
+        {/* Background image - Desktop */}
+        <img
+          src="/Gemini_Generated_Image_nt024nnt024nnt02.png"
+          alt="Background"
+          class="hidden md:block absolute inset-0 w-full h-full object-cover"
+          style="width: 100%; height: 100%; z-index: 0;"
+        />
+        <div class="container mx-auto px-6 relative z-10">
+          <div class="text-center max-w-4xl mx-auto">
+            <h1 class="text-4xl lg:text-5xl font-normal mb-4 font-rocaone tracking-tight" style="color: #fffff0;">
+              Contact Me
+            </h1>
+            <p class="text-lg max-w-3xl mx-auto mb-6" style="color: #fffff0;">
+              Book your holistic wellness treatment in Saltcoats. Contact me to schedule your appointment or ask any questions about my services.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center text-lg">
+              <a href="tel:07782844404" class="hover:opacity-80 transition-opacity font-medium flex items-center gap-2" style="color: #fffff0">
+                <Phone class="w-5 h-5" />
+                <span>07782 844404</span>
+              </a>
+              <span class="hidden sm:inline" style="color: rgba(255, 255, 240, 0.6);">•</span>
+              <a href="mailto:goddessofgoodness1@outlook.com" class="hover:opacity-80 transition-opacity font-medium flex items-center gap-2" style="color: #fffff0">
+                <Send class="w-5 h-5" />
+                <span>goddessofgoodness1@outlook.com</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="max-w-6xl mx-auto px-6 py-12">
+        <section class="mb-8 sm:mb-12 md:mb-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
+          <!-- Facebook Messenger -->
+          <div class="text-white transition-all duration-300 hover:scale-105 transform rounded-lg shadow-lg p-6" style="background-color: #4a4f31;" onmouseover="this.style.backgroundColor='#3d4128'" onmouseout="this.style.backgroundColor='#4a4f31'">
+            <div class="text-center">
+              <div class="mx-auto mb-4 p-3 bg-white/20 rounded-full w-fit">
+                <MessageCircle class="w-8 h-8" />
+              </div>
+              <h2 class="text-xl font-bold mb-4">Facebook Messenger</h2>
+              <p class="text-white/90 mb-6 leading-relaxed">
+                Send a quick message to book your treatment or ask any questions about my services.
+              </p>
+              <a href="#" class="bg-white px-6 py-3 rounded-full inline-block font-medium transition-colors hover:opacity-90" style="color: #4a4f31;">
+                Message on Facebook
+              </a>
+            </div>
+          </div>
+
+          <!-- WhatsApp -->
+          <div class="text-white transition-all duration-300 hover:scale-105 transform rounded-lg shadow-lg p-6" style="background-color: #7a8f6d;" onmouseover="this.style.backgroundColor='#6a7d5d'" onmouseout="this.style.backgroundColor='#7a8f6d'">
+            <div class="text-center">
+              <div class="mx-auto mb-4 p-3 bg-white/20 rounded-full w-fit">
+                <MessageCircle class="w-8 h-8" />
+              </div>
+              <h2 class="text-xl font-bold mb-4">WhatsApp</h2>
+              <p class="text-white/90 mb-6 leading-relaxed">
+                Chat directly with me to arrange your wellness treatment or appointment.
+              </p>
+              <a href="#" class="bg-white px-6 py-3 rounded-full inline-block font-medium transition-colors hover:opacity-90" style="color: #7a8f6d;">
+                Chat on WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Phone Call -->
+          <div class="text-white transition-all duration-300 hover:scale-105 transform rounded-lg shadow-lg p-6" style="background-color: #4a4f31;" onmouseover="this.style.backgroundColor='#3d4128'" onmouseout="this.style.backgroundColor='#4a4f31'">
+            <div class="text-center">
+              <div class="mx-auto mb-4 p-3 bg-white/20 rounded-full w-fit">
+                <Phone class="w-8 h-8" />
+              </div>
+              <h2 class="text-xl font-bold mb-4">Phone Call</h2>
+              <p class="text-white/90 mb-4 leading-relaxed">
+                Speak directly with me to discuss your treatment needs and book your appointment.
+              </p>
+              <p class="text-white/90 text-lg font-semibold mb-4">
+                07782 844404
+              </p>
+              <a href="tel:07782844404" class="bg-white px-6 py-3 rounded-full inline-block font-medium transition-colors hover:opacity-90" style="color: #4a4f31;">
+                Call Me
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form -->
+      <section class="mb-8 sm:mb-12 md:mb-16">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-normal text-foreground mb-6 sm:mb-8 text-center font-rocaone tracking-tight px-4">
+          Or Send a Message
+        </h2>
+        
+        <div class="max-w-2xl mx-auto px-4 sm:px-6">
+          <div class="bg-white/80 backdrop-blur-sm rounded-lg shadow-lg p-4 sm:p-6" style="border: 1px solid #7a8f6d;">
+            <h3 class="text-2xl font-bold text-center text-foreground mb-2">
+              Contact Form
+            </h3>
+            <p class="text-muted-foreground text-center mb-6">
+              Fill out the form below and I'll get back to you within 24 hours.
+            </p>
+            
+            <form action="https://formspree.io/f/xdklbyze" method="POST" class="space-y-6">
+              <input type="hidden" name="_subject" value="New Contact Form Submission" />
+              <input type="hidden" name="_next" value="?success=true" />
+              
+              <div class="grid md:grid-cols-2 gap-4">
+                <div class="space-y-2">
+                  <label for="name" class="text-foreground font-medium">
+                    Full Name *
+                  </label>
+                  <input 
+                    id="name" 
+                    name="name"
+                    placeholder="Your full name" 
+                    class="w-full px-4 py-2 rounded-lg focus:outline-none"
+                    style="border: 1px solid #7a8f6d;"
+                    onfocus="this.style.borderColor='#4a4f31'; this.style.boxShadow='0 0 0 3px rgba(74, 79, 49, 0.1)'"
+                    onblur="this.style.borderColor='#7a8f6d'; this.style.boxShadow='none'"
+                    required
+                  />
+                </div>
+                <div class="space-y-2">
+                  <label for="email" class="text-foreground font-medium">
+                    Email Address *
+                  </label>
+                  <input 
+                    id="email" 
+                    name="email"
+                    type="email" 
+                    placeholder="your.email@example.com" 
+                    class="w-full px-4 py-2 rounded-lg focus:outline-none"
+                    style="border: 1px solid #7a8f6d;"
+                    onfocus="this.style.borderColor='#4a4f31'; this.style.boxShadow='0 0 0 3px rgba(74, 79, 49, 0.1)'"
+                    onblur="this.style.borderColor='#7a8f6d'; this.style.boxShadow='none'"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="space-y-2">
+                <label for="phone" class="text-foreground font-medium">
+                  Phone Number
+                </label>
+                <input 
+                  id="phone" 
+                  name="phone"
+                  type="tel" 
+                  placeholder="Your phone number" 
+                  class="w-full px-4 py-2 rounded-lg focus:outline-none"
+                  style="border: 1px solid #7a8f6d;"
+                  onfocus="this.style.borderColor='#4a4f31'; this.style.boxShadow='0 0 0 3px rgba(74, 79, 49, 0.1)'"
+                  onblur="this.style.borderColor='#7a8f6d'; this.style.boxShadow='none'"
+                />
+              </div>
+              <div class="space-y-2">
+                <label for="message" class="text-foreground font-medium">
+                  Message *
+                </label>
+                <textarea 
+                  id="message" 
+                  name="message"
+                  placeholder="Tell me about your wellness goals, any health concerns, and your preferred treatment..."
+                  class="w-full px-4 py-2 rounded-lg focus:outline-none min-h-[120px]"
+                  style="border: 1px solid #7a8f6d;"
+                  onfocus="this.style.borderColor='#4a4f31'; this.style.boxShadow='0 0 0 3px rgba(74, 79, 49, 0.1)'"
+                  onblur="this.style.borderColor='#7a8f6d'; this.style.boxShadow='none'"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full text-white py-3 text-lg font-medium rounded-full transition-all duration-300 hover:scale-105 transform"
+                style="background-color: #4a4f31;"
+                onmouseover="this.style.backgroundColor='#3d4128'"
+                onmouseout="this.style.backgroundColor='#4a4f31'"
+              >
+                <span class="flex items-center justify-center gap-2">
+                  <Send class="w-5 h-5" />
+                  Send Message
+                </span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+    </main>
+    
+    <Footer client:load />
+  </div>
+</BaseLayout>
+
+<script is:inline>
+  // Handle success message from URL parameter
+  if (typeof window !== 'undefined') {
+    const urlParams = new URLSearchParams(window.location.search);
+    const success = urlParams.get('success');
+    if (success === 'true') {
+      const formSection = document.querySelector('form')?.parentElement;
+      if (formSection) {
+        const successDiv = document.createElement('div');
+        successDiv.className = 'rounded-lg p-6 text-center mb-6';
+        successDiv.style.backgroundColor = '#e8efe5';
+        successDiv.style.border = '1px solid #7a8f6d';
+        successDiv.innerHTML = `
+          <div class="flex items-center justify-center mb-4">
+            <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: #4a4f31;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <h3 class="text-xl font-semibold" style="color: #4a4f31;">Message Sent Successfully!</h3>
+          </div>
+          <p style="color: #4a4f31;">Thank you for your message. I'll get back to you within 24 hours.</p>
+        `;
+        formSection.parentElement?.insertBefore(successDiv, formSection);
+      }
+    }
+  }
+</script>
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.goddessofgoodness.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Contact",
+      "item": "https://www.goddessofgoodness.com/contact"
+    }
+  ]
+})} />
+

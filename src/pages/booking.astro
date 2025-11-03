@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import ServicesSection from '../components/ServicesSection';
+---
+
+<BaseLayout 
+  title="Book Your Treatment - Holistic Wellness Services in Saltcoats | Goddess of Goodness" 
+  description="Book your holistic wellness treatment in Saltcoats. Choose from Swedish massage, cupping therapy, Reiki energy healing, Thai foot massage, Hopi ear candling, and signature facials. Schedule your appointment today."
+  canonical="/booking"
+>
+  <div class="min-h-screen bg-background">
+    <Header client:load />
+    
+    <main>
+      <section class="relative pt-24 pb-8 lg:pt-32 lg:pb-12 overflow-hidden" style="min-height: 60vh;">
+        {/* Background image - Mobile */}
+        <img
+          src="/phoneback.png"
+          alt="Background"
+          class="absolute inset-0 w-full h-full object-cover md:hidden"
+          style="width: 100%; height: 100%; z-index: 0;"
+        />
+        {/* Background image - Desktop */}
+        <img
+          src="/Gemini_Generated_Image_nt024nnt024nnt02.png"
+          alt="Background"
+          class="hidden md:block absolute inset-0 w-full h-full object-cover"
+          style="width: 100%; height: 100%; z-index: 0;"
+        />
+        <div class="container mx-auto px-6 relative z-10">
+          <div class="text-center max-w-4xl mx-auto">
+            <h1 class="text-5xl lg:text-7xl font-normal leading-tight mb-6 font-rocaone tracking-tight" style="color: #fffff0;">
+              My Services
+            </h1>
+            <p class="text-xl leading-relaxed" style="color: #fffff0;">
+              Professional holistic wellness services in Saltcoats. Swedish massage, cupping therapy, Reiki energy healing, Thai foot massage, Hopi ear candling, and signature facials.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <ServicesSection client:load />
+    </main>
+    
+    <Footer client:load />
+  </div>
+</BaseLayout>
+
+

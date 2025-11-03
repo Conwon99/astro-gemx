@@ -1,0 +1,250 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import ScrollAnimate from '../components/ScrollAnimate';
+---
+
+<BaseLayout 
+  title="About Me - Goddess of Goodness | Holistic Wellness Practitioner in Saltcoats" 
+  description="Meet Goddess of Goodness, a professional holistic wellness practitioner in Saltcoats specializing in Swedish massage, cupping therapy, Reiki energy healing, Thai foot massage, Hopi ear candling, and signature facials."
+  canonical="/about"
+>
+  <div class="min-h-screen bg-background">
+    <Header client:load />
+
+    <main>
+      {/* Hero Section */}
+      <section class="relative pt-24 pb-8 lg:pt-32 lg:pb-12 overflow-hidden" style="min-height: 60vh;">
+        {/* Background image - Mobile */}
+        <img
+          src="/phoneback.png"
+          alt="Background"
+          class="absolute inset-0 w-full h-full object-cover md:hidden"
+          style="width: 100%; height: 100%; z-index: 0;"
+        />
+        {/* Background image - Desktop */}
+        <img
+          src="/Gemini_Generated_Image_nt024nnt024nnt02.png"
+          alt="Background"
+          class="hidden md:block absolute inset-0 w-full h-full object-cover"
+          style="width: 100%; height: 100%; z-index: 0;"
+        />
+        <div class="container mx-auto px-6 relative z-10">
+          <ScrollAnimate className="text-center max-w-4xl mx-auto" client:load>
+            <h1 class="text-5xl lg:text-7xl font-normal leading-tight mb-6 font-figtree" style="color: #fffff0;">
+              About Me
+            </h1>
+            <p class="text-xl leading-relaxed" style="color: #fffff0;">
+              Professional holistic wellness practitioner dedicated to your wellbeing and healing journey in Saltcoats.
+            </p>
+          </ScrollAnimate>
+        </div>
+      </section>
+
+      {/* Main Story Section */}
+      <section class="py-20 lg:py-32">
+        <div class="container mx-auto px-6">
+          <div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div class="space-y-8">
+              <div>
+                <h2 class="text-3xl lg:text-4xl font-rocaone text-foreground mb-6">
+                  My Wellness Journey
+                </h2>
+                <div class="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                  <p>
+                    At Goddess of Goodness, I believe in the power of holistic healing to transform your wellbeing. My journey began with a deep passion for helping others find balance, relief, and rejuvenation through natural therapeutic approaches.
+                  </p>
+                  <p>
+                    I specialize in a comprehensive range of holistic therapies including Swedish massage, cupping therapy, Reiki energy healing, Thai foot massage, Hopi ear candling, and signature facials—all designed to support your body's natural healing processes.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-xl">
+                <img 
+                  src="/gemma.jpg" 
+                  alt="Goddess of Goodness - Professional holistic wellness practitioner" 
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Holistic Approach Section */}
+      <section class="py-20 lg:py-32 bg-wellness-green-50">
+        <div class="container mx-auto px-6">
+          <div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div class="relative order-2 lg:order-1">
+              <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-xl">
+                <img 
+                  src="/pexels-anete-lusina-5240700.jpg" 
+                  alt="Holistic wellness therapy in a peaceful setting" 
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <div class="space-y-8 order-1 lg:order-2">
+              <div>
+                <h2 class="text-3xl lg:text-4xl font-rocaone text-foreground mb-6">
+                    My Holistic Approach
+                </h2>
+                <div class="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                  <p>
+                    My multi-modal approach to wellness combines the best of traditional and modern healing techniques. From the deep pressure release of Swedish massage to the energy balancing of Reiki, each treatment is carefully tailored to your unique needs.
+                  </p>
+                  <p>
+                    I believe in creating a safe, welcoming, and nurturing environment where you can truly relax and let go. Whether you're seeking relief from chronic pain, stress reduction, or simply time to reconnect with yourself, my therapies are designed to support your journey to optimal health.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Philosophy Section */}
+      <section class="py-20 lg:py-32">
+        <div class="container mx-auto px-6">
+          <div class="max-w-4xl mx-auto text-center">
+            <div class="bg-primary text-primary-foreground p-12 rounded-2xl">
+              <h2 class="text-3xl lg:text-4xl font-figtree mb-8">
+                My Philosophy
+              </h2>
+              <blockquote class="text-2xl lg:text-3xl font-instrument-serif italic mb-8 leading-relaxed">
+                "Health is a state of complete harmony of the body, mind and spirit"
+              </blockquote>
+              <p class="text-lg text-primary-foreground/80 mb-8">Ancient Wisdom</p>
+              <p class="text-xl text-primary-foreground/90 leading-relaxed mb-8">
+                At Goddess of Goodness, I guide and support your wellness journey with compassion, knowledge, and dedicated care. My holistic therapies are designed to nurture your body, calm your mind, and restore your spirit.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="/contact" 
+                  class="bg-primary-foreground text-primary px-8 py-4 rounded-full hover:bg-primary-foreground/90 transition-colors duration-300 font-medium text-lg whitespace-nowrap"
+                >
+                  Book Your Treatment
+                </a>
+                <a 
+                  href="/contact" 
+                  class="border-2 border-primary-foreground text-primary-foreground px-8 py-4 rounded-full hover:bg-primary-foreground hover:text-primary transition-all duration-300 font-medium text-lg"
+                >
+                  Get in Touch
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Qualifications & Experience Section */}
+      <section class="py-20 lg:py-32 bg-wellness-green-50">
+        <div class="container mx-auto px-6">
+          <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+              <h2 class="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone">
+                Qualifications & Experience
+              </h2>
+              <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
+                Professional qualifications and extensive experience in holistic healing therapies.
+              </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <div class="text-center">
+                  <div class="w-16 h-16 bg-wellness-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span class="text-2xl">💆</span>
+                  </div>
+                  <h3 class="text-2xl font-rocaone text-foreground mb-4">Massage Therapy</h3>
+                  <p class="text-muted-foreground leading-relaxed">
+                    Certified in Swedish massage and cupping therapy. Expert in deep tissue work and therapeutic healing techniques for pain relief and relaxation.
+                  </p>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <div class="text-center">
+                  <div class="w-16 h-16 bg-wellness-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span class="text-2xl">✨</span>
+                  </div>
+                  <h3 class="text-2xl font-rocaone text-foreground mb-4">Energy Healing</h3>
+                  <p class="text-muted-foreground leading-relaxed">
+                    Certified Reiki practitioner specializing in energy balancing and chakra alignment. Also offering Thai foot massage, Hopi ear candling, and signature facials.
+                  </p>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-2xl p-8 shadow-lg md:col-span-2 lg:col-span-1">
+                <div class="text-center">
+                  <div class="w-16 h-16 bg-wellness-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span class="text-2xl">🏆</span>
+                  </div>
+                  <h3 class="text-2xl font-rocaone text-foreground mb-4">Holistic Therapies</h3>
+                  <p class="text-muted-foreground leading-relaxed">
+                    Comprehensive training across multiple healing modalities. Committed to ongoing professional development and excellence in holistic wellness.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section class="py-20 lg:py-32">
+        <div class="container mx-auto px-6">
+          <div class="text-center max-w-4xl mx-auto">
+            <h2 class="text-4xl lg:text-6xl font-normal text-foreground mb-6 font-rocaone">
+              Ready to Start Your Wellness Journey?
+            </h2>
+            <p class="text-xl text-muted-foreground mb-8 leading-relaxed">
+              Experience the transformative power of holistic healing in Saltcoats. Begin your journey to wellness with my professional treatments and compassionate care.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/zoom-booking" 
+                class="bg-wellness-green-600 text-white px-8 py-4 rounded-full hover:bg-wellness-green-700 transition-colors duration-300 font-medium text-lg whitespace-nowrap"
+              >
+                Book Your Treatment
+              </a>
+              <a 
+                href="/zoom-booking" 
+                class="border-2 border-wellness-green-600 text-wellness-green-600 px-8 py-4 rounded-full hover:bg-wellness-green-600 hover:text-white transition-all duration-300 font-medium text-lg"
+              >
+                Contact Me
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer client:load />
+  </div>
+</BaseLayout>
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.goddessofgoodness.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About",
+      "item": "https://www.goddessofgoodness.com/about"
+    }
+  ]
+})} />
+
