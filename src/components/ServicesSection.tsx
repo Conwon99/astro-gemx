@@ -135,7 +135,11 @@ const ServicesSection = () => {
               </div>
             </ScrollAnimate>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div className={`grid md:grid-cols-2 gap-8 max-w-7xl mx-auto ${
+              category.services.length === 2 
+                ? 'lg:grid-cols-2 lg:max-w-4xl' 
+                : 'lg:grid-cols-3'
+            }`}>
               {category.services.map((service, serviceIndex) => (
                 <ScrollAnimate key={serviceIndex}>
                   <Card className="h-full bg-card border border-border hover:shadow-xl transition-all duration-300 hover:scale-105 flex flex-col">
