@@ -63,7 +63,7 @@ const Header = () => {
             <a href="/about" className="hover:text-primary transition-colors duration-200 drop-shadow-sm" style={{color: isScrolled ? '#ffffff' : '#fffff0'}}>
               About
             </a>
-            <a href="/contact" className="hover:text-primary transition-colors duration-200 drop-shadow-sm" style={{color: isScrolled ? '#ffffff' : '#fffff0'}}>
+            <a href="/booking" className="hover:text-primary transition-colors duration-200 drop-shadow-sm" style={{color: isScrolled ? '#ffffff' : '#fffff0'}}>
               Book Treatment
             </a>
             <a href="/services" className="hover:text-primary transition-colors duration-200 drop-shadow-sm" style={{color: isScrolled ? '#ffffff' : '#fffff0'}}>
@@ -82,7 +82,7 @@ const Header = () => {
 
           {/* Desktop Book Now Button */}
           <div className="hidden md:block">
-            <a href="/contact" className="px-6 py-2 rounded-full transition-colors duration-200 font-medium whitespace-nowrap min-w-[100px]" style={{backgroundColor: '#ffffff', color: '#4a4f31'}} onMouseEnter={(e) => e.target.style.backgroundColor = '#f3f4f6'} onMouseLeave={(e) => e.target.style.backgroundColor = '#ffffff'} onClick={() => trackBooking('Book Now', 'Header Desktop')}>
+            <a href="/booking" className="px-6 py-2 rounded-full transition-colors duration-200 font-medium whitespace-nowrap min-w-[100px]" style={{backgroundColor: '#ffffff', color: '#4a4f31'}} onMouseEnter={(e) => e.target.style.backgroundColor = '#f3f4f6'} onMouseLeave={(e) => e.target.style.backgroundColor = '#ffffff'} onClick={() => trackBooking('Book Now', 'Header Desktop')}>
               Book Now
             </a>
           </div>
@@ -115,7 +115,7 @@ const Header = () => {
                 About
               </a>
               <a 
-                href="/contact" 
+                href="/booking" 
                 className="hover:opacity-80 transition-opacity duration-200 py-2" style={{color: '#ffffff'}}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -153,7 +153,7 @@ const Header = () => {
             {/* Mobile Book Now Button */}
             <div className="mt-6 pt-4 border-t px-2" style={{borderColor: 'rgba(255, 255, 255, 0.2)'}}>
               <a 
-                href="/contact" 
+                href="/booking" 
                 className="px-6 py-3 rounded-full transition-colors duration-200 font-medium text-center block whitespace-nowrap" 
                 style={{backgroundColor: '#ffffff', color: '#4a4f31'}} 
                 onMouseEnter={(e) => e.target.style.backgroundColor = '#f3f4f6'} 

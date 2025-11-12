@@ -57,7 +57,7 @@ const HeroSection = () => {
 
             <div className="flex justify-center sm:justify-start">
               <a 
-                href="/contact" 
+                href="/booking" 
                 className="px-6 py-3 sm:px-8 sm:py-4 rounded-full transition-all duration-300 font-medium text-base sm:text-lg hover:scale-105 transform inline-block text-center whitespace-nowrap w-full sm:w-auto" 
                 style={{ backgroundColor: 'hsl(36 100% 85%)', color: 'hsl(var(--brand-contrast))', border: 'none', boxShadow: '0 0 20px rgba(255, 205, 129, 0.6), 0 0 40px rgba(255, 205, 129, 0.4)', opacity: 1 }}
                 onMouseEnter={(e) => { const target = e.target as HTMLElement; target.style.backgroundColor = 'hsl(36 100% 80%)'; target.style.color = 'hsl(70 24% 20%)'; target.style.boxShadow = '0 0 30px rgba(255, 205, 129, 0.8), 0 0 60px rgba(255, 205, 129, 0.6)'; }} 

@@ -31,7 +31,7 @@ const TeamSection = () => {
             </div>
             
             <a 
-              href="/contact" 
+              href="/booking" 
               className="text-white px-6 py-3 rounded-full transition-all duration-300 font-medium text-sm sm:text-base self-start hover:scale-105 transform inline-block w-full sm:w-auto text-center sm:text-left"
               style={{backgroundColor: '#4a4f31'}}
               onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = '#3d4128'}

@@ -86,6 +86,36 @@ const ServicesSection = () => {
           benefits: ["Deep skin cleansing", "Hydration", "Anti-aging", "Relaxation", "Glowing skin"]
         }
       ]
+    },
+    {
+      category: "Kambo Treatment",
+      description: "Ancient Amazonian healing medicine for deep cleansing, detoxification, and holistic wellness. Kambo is a powerful traditional treatment that promotes physical, emotional, and spiritual healing.",
+      services: [
+        {
+          name: "Kambo - One-to-One",
+          price: "£120",
+          duration: "20-45 min",
+          description: "Traditional Amazonian medicine from the Phyllomedusa Bicolor tree frog. Kambo is applied through small gates on the skin to promote deep detoxification, immune system support, and emotional release. The treatment crosses the blood-brain barrier to reach areas that are difficult to treat with other methods.",
+          benefits: ["Deep detoxification", "Immune system boost", "Emotional release", "Pain relief", "Spiritual cleansing", "Anxiety & depression support"],
+          isKambo: true
+        },
+        {
+          name: "Kambo - Group of 2-3",
+          price: "£100",
+          duration: "20-45 min",
+          description: "Traditional Amazonian medicine from the Phyllomedusa Bicolor tree frog. Kambo is applied through small gates on the skin to promote deep detoxification, immune system support, and emotional release. The treatment crosses the blood-brain barrier to reach areas that are difficult to treat with other methods.",
+          benefits: ["Deep detoxification", "Immune system boost", "Emotional release", "Pain relief", "Spiritual cleansing", "Anxiety & depression support"],
+          isKambo: true
+        },
+        {
+          name: "Kambo - Group of 4+",
+          price: "£80",
+          duration: "20-45 min",
+          description: "Traditional Amazonian medicine from the Phyllomedusa Bicolor tree frog. Kambo is applied through small gates on the skin to promote deep detoxification, immune system support, and emotional release. The treatment crosses the blood-brain barrier to reach areas that are difficult to treat with other methods.",
+          benefits: ["Deep detoxification", "Immune system boost", "Emotional release", "Pain relief", "Spiritual cleansing", "Anxiety & depression support"],
+          isKambo: true
+        }
+      ]
     }
   ];
 
@@ -142,14 +172,14 @@ const ServicesSection = () => {
                       </div>
 
                       <a
-                        href="/contact"
+                        href={(service as any).isKambo ? "/kambo" : "/contact"}
                         className="w-full mt-auto py-3 font-medium rounded-full transition-all duration-300 hover:scale-105 inline-block text-center text-white"
                         style={{ backgroundColor: '#4a4f31' }}
                         onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = '#3d4128'}
                         onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = '#4a4f31'}
                         onClick={() => trackBooking(service.name, 'Services Page')}
                       >
-                        Book {service.name}
+                        {(service as any).isKambo ? "Learn More About Kambo" : `Book ${service.name}`}
                       </a>
                     </CardContent>
                   </Card>
@@ -346,7 +376,7 @@ const ServicesSection = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/zoom-booking"
+                href="/contact"
                 className="text-white px-8 py-4 rounded-full transition-all duration-300 font-medium text-lg hover:scale-105 transform inline-block"
                 style={{ backgroundColor: '#4a4f31' }}
                 onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = '#3d4128'}
@@ -356,7 +386,7 @@ const ServicesSection = () => {
                 Book Your Treatment
               </a>
               <a
-                href="/zoom-booking"
+                href="/contact"
                 className="border-2 px-8 py-4 rounded-full transition-all duration-300 font-medium text-lg hover:scale-105 transform inline-block"
                 style={{ backgroundColor: '#ffffff', color: '#4a4f31', borderColor: '#4a4f31' }}
                 onMouseEnter={(e) => {

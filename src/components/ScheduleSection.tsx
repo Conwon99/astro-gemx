@@ -64,7 +64,7 @@ const ScheduleSection = () => {
             </div>
 
             <div>
-              <a href="/contact" className="inline-block text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full transition-all duration-300 font-medium text-base sm:text-lg hover:scale-105 transform text-center whitespace-nowrap w-full sm:w-auto" style={{backgroundColor: '#4a4f31'}} onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = '#3d4128'} onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = '#4a4f31'} onClick={() => trackBooking('Book Treatment', 'Massage Therapy Section')}>
+              <a href="/booking" className="inline-block text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full transition-all duration-300 font-medium text-base sm:text-lg hover:scale-105 transform text-center whitespace-nowrap w-full sm:w-auto" style={{backgroundColor: '#4a4f31'}} onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = '#3d4128'} onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = '#4a4f31'} onClick={() => trackBooking('Book Treatment', 'Massage Therapy Section')}>
                 Book Treatment
               </a>
             </div>

@@ -90,7 +90,7 @@ const WhatIsCuppingSection = () => {
             {/* Call to Action */}
             <div className="mt-4 sm:mt-6">
               <a
-                href="/contact"
+                href="/booking"
                 className="text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full transition-all duration-300 font-medium text-base sm:text-lg hover:scale-105 transform inline-block text-center whitespace-nowrap w-full sm:w-auto"
                 style={{ backgroundColor: '#4a4f31' }}
                 onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = '#3d4128'}

@@ -39,7 +39,7 @@ const PricingSection = () => {
     },
     {
       name: "Specialized Treatments",
-      price: "£15-30",
+      price: "£15-80",
       period: "per treatment",
       buttonText: "Book Treatment",
       buttonVariant: "outline" as const,
@@ -47,7 +47,8 @@ const PricingSection = () => {
         "Thai foot massage - £30",
         "Hopi ear candling - £15",
         "Hopi + sinus massage - £20",
-        "Signature facial - £26"
+        "Signature facial - £26",
+        "Kambo treatment - from £80"
       ],
       cardClass: "bg-card hover:bg-accent/20"
     }

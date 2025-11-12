@@ -26,6 +26,14 @@ const ServiceBookingCards = () => {
         { name: "Hopi + Sinus Massage", price: "£20", duration: "45 min", slug: "hopi-sinus" },
         { name: "Signature Facial", price: "£26", duration: "60 min", slug: "signature-facial" },
       ]
+    },
+    {
+      category: "Kambo Treatment",
+      services: [
+        { name: "Kambo - One-to-One", price: "£120", duration: "20-45 min", slug: "kambo-one", isKambo: true },
+        { name: "Kambo - Group of 2-3", price: "£100", duration: "20-45 min", slug: "kambo-group-2-3", isKambo: true },
+        { name: "Kambo - Group of 4+", price: "£80", duration: "20-45 min", slug: "kambo-group-4", isKambo: true },
+      ]
     }
   ];
 
@@ -43,16 +51,16 @@ const ServiceBookingCards = () => {
                   <div>
                     <h3 className="text-xl font-medium text-foreground mb-2">{service.name}</h3>
                     <p className="text-3xl font-bold text-primary mb-2">{service.price}</p>
-                    <p className="text-sm text-muted-foreground">{service.duration}</p>
+                    <p className="text-sm text-muted-foreground mb-2">{service.duration}</p>
                   </div>
                   <a 
-                    href="/contact"
+                    href={(service as any).isKambo ? "/kambo" : "/contact"}
                     className="w-full mt-4 py-2 font-medium rounded-full transition-all duration-300 hover:scale-105 inline-block text-center text-white"
                     style={{ backgroundColor: '#4a4f31' }}
                     onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = '#3d4128'}
                     onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = '#4a4f31'}
                   >
-                    Book Session
+                    {(service as any).isKambo ? "Learn More" : "Book Session"}
                   </a>
                 </CardContent>
               </Card>
